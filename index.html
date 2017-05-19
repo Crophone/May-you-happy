@@ -1,180 +1,181 @@
-
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
-    <meta charset="utf-8">
-    <title>May_you_happy</title>
-
-    <!----------------------------------------------------------------------------------------->
-    <link href="css/rainday.css" rel="stylesheet" type="text/css">
-    <script src="js/rainyday.js"></script>
-    <link href="css/love.css" rel="stylesheet" type="text/css" >
-    <script>
-        function run() {
-            var image = document.getElementById('background');
-            image.onload = function() {
-                var engine = new RainyDay({
-                    image: this
-                });
-                engine.rain([ [3, 2, 2] ], 100);
-            };
-            image.crossOrigin = 'anonymous';
-            image.src = 'http://i.imgur.com/U1Tqqdw.jpg';
-        }
-    </script>
-<!--<link href="css/canlendar.css"rel="stylesheet" type="text/css"> -->
-    <link href="css/lock.css"rel="stylesheet" type="text/css">
-<!--    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet " />    <!--------lock那一段的链接---->
-
+    <title>May-you-happy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/islider.css" rel="stylesheet">
+    <link href="css/icon.css" rel="stylesheet">
+    <!--<link href="css/cloud.css" rel="stylesheet">-->
 </head>
 
+<body>
+    <audio class="audio-player" id="audioPlayer" autoplay="autoplay" src="./assets/bgm.mp3"></audio>
+    <div id="loading" class="loading">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sliderContainer" class="slider-contianer"></div>
+    <div id="sliderContent" class="hide">
+        <section id="rainFall" class="rain-fall">
+            <img id="rainFallImage" class="rain-fall-image" src="assets/rain_fall_bg.jpg" />
+        </section>
+
+        <section id="envelop" class="envelop">
+            <p id="letterContainer" class="letter"></p>
+            <p id="letterContent" class="letter-content">locking小姐姐，你好。
+如果有时间，我希望你能听一听这个故事。</p>
+        </section>
 
 
-<!---********************************************************************************************----->
-<!--------------------------------------------------------------------------------------------->
-<div class="rainday-container">
-<body onload="run();">
-<img id="background" alt="background" src="" />
-<script src="http://dreamsky.github.io/main/blog/common/jquery.min.js"></script>
-</body>
-</div>
-<!------------------------------------------------------------------------------------------------->
-<section>
-    <p>locking小姐姐，你好</p>
-    <p>如果有时间，我希望你能听一听这个故事</p>
-
-
-
-</section>
-
-<!--------------------------------------------------------------------------------------------->
-
-<section class="lock lock-txt text-center ">
-            <p class="lock-txt-normal">Since the day </p>
+        <section id="lock" class="lock">
+            <p class="lock-txt-normal">Since the day</p>
             <p class="lock-txt-stress">you popped up in my life,</p>
             <p class="lock-txt-normal">you have</p>
             <p class="lock-txt-stress">locked my heart.</p>
-</section>
-<!-------------------------------------------------------------------------------------------------->
-<section>
-<p></p>
-</section>
-<!----------------------------------------------------------------------------------------------->
-<!--<section class="calendar-body ">
-    <div class="calendar-container">
+        </section>
 
-        <div class="calendar-calendar-container text-center">
+        <section class="lock-image">
+            <img src="./assets/lock.jpg" alt="lock" />
+        </section>
 
-            <header>
+        <section class="video">
+            <div class="video-box">
+                <div class="video-title">Crophone-av2017520</div>
+                <div class="video-container">
+                    <video id="player" class="video-player" height="304" src="./assets/video.mp4" />
+                </div>
+                <div class="video-controll">
+                    <i id="playButton" class="material-icons">play_arrow</i>
+                    <i id="pauseButton" class="material-icons hide">pause</i>
+                    <!--<i id="fullScreenButton" class="material-icons">fullscreen</i>-->
+                </div>
+            </div>
+        </section>
 
-                <div class="day">20</div>
-                <div class="month">May</div>
+        <section class="canlender">
+            <div class="container">
+                <div class="calendar-container">
+                    <header>
+                        <div class="day">20</div>
+                        <div class="month">May</div>
+                    </header>
+                    <table class="calendar">
+                        <thead>
+                            <tr>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>Thu</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                                <td>Sun</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="prev-month">1</td>
+                                <td class="prev-month">2</td>
+                                <td class="prev-month">3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td class="current-day">20</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td class="next-month">1</td>
+                                <td class="next-month">2</td>
+                                <td class="next-month">3</td>
+                                <td class="next-month">4</td>
+                            </tr>
+                            <tr>
+                                <td class="next-month">5</td>
+                                <td class="next-month">6</td>
+                                <td class="next-month">7</td>
+                                <td class="next-month">8</td>
+                                <td class="next-month">9</td>
+                                <td class="next-month">10</td>
+                                <td class="next-month">11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end calendar-container -->
+            </div>
+            <div class="canlender-text">
+                <p class="canlender-text-content">今天，是二零一七年五月二十日</p>
+                <p class="canlender-text-content">所以，我想对你说</p>
+                <p class="canlender-text-content">May-you-happy</p>
+                <p class="canlender-text-content">and</p>
+            </div>
 
-            </header>
+        </section>
 
-            <table class="calendar">
-
-                <thead>
-
-                <tr>
-
-                    <td>Mon</td>
-                    <td>Tue</td>
-                    <td>Wed</td>
-                    <td>Thu</td>
-                    <td>Fri</td>
-                    <td>Sat</td>
-                    <td>Sun</td>
-
-                </tr>
-
-                </thead>
-
-
-
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-
-                <tr>
-
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
-                </tr>
-
-                <tr>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                    <td class="current-day">20</td>
-                    <td>21</td>
-                </tr>
-
-                <tr>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                </tr>
-
-                <tr>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
-                    <td class="next-month">1</td>
-                    <td class="next-month">2</td>
-                    <td class="next-month">3</td>
-                    <td class="next-month">4</td>
-                </tr>
-
-                <tr>
-                    <td class="next-month">5</td>
-                    <td class="next-month">6</td>
-                    <td class="next-month">7</td>
-                    <td class="next-month">8</td>
-                    <td class="next-month">9</td>
-                    <td class="next-month">10</td>
-                    <td class="next-month">11</td>
-                </tr>
-                </tbody>
-
-            </table>
-
-            <div class="calendar-ring-left"></div>
-            <div class="calendar-ring-right"></div>
-
-        </div> <!-- end calendar-container -
-
-    </div> <!-- end container -
-</section>
--->
-<!----------------------------------------------------------------------------------------------->
-<section class="love">
-    <div id="box">
-        <span class="txt">I</span>
-        <span class="♥">♥</span>
-        <span class="txt" contenteditable spellcheck="false">YOU</span>
+        <section class="love-section">
+            <p id="loveText"> <span class="text">I</span>
+                <i class="material-icons love">favorite</i>
+                <span class="text">YOU</span>
+            </p>
+        </section>
     </div>
-</section>
 
+    <div id="downArrow" class="down-tip animated hide-tip"><img class="down-arrow flip" src="./assets/down_arrow.png" alt="down_arrow"></div>
 
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/islider.js"></script>
+    <script src="https://cdn.staticfile.org/rainyday.js/0.1.2/rainyday.min.js"></script>
+
+    <script src="./js/app.js"></script>
 </body>
-
 
 </html>

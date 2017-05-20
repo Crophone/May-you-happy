@@ -39,12 +39,12 @@ S.on('slideChanged', function (number, element) {
                 showText(element);
             }
             break;
-        case 4:
+        case 5:
             if (initedPlayer === false) {
                 initPlayer(element);
             }
             break;
-        case 5:
+        case 4:
             if (canlenderShown === false) {
                 canlenderShow(element);
             }
